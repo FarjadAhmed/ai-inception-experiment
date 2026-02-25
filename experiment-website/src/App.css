@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+:root{--accent-blue:#00aaff;--accent-green:#00ff99;--accent-pink:#ff66aa;--background:#0a0a0f;--text:#e0e0e0;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;font-family:'Inter',sans-serif;background:var(--background);color:var(--text);min-height:100vh;line-height:1.6;background-image:radial-gradient(circle,transparent 0%,transparent 70%),repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,0.03) 2px,rgba(255,255,255,0.03) 4px),repeating-linear-gradient(90deg,transparent,transparent 2px,rgba(255,255,255,0.03) 2px,rgba(255,255,255,0.03) 4px);background-size:1px 1px,100% 100%,100% 100%;}
+.fade-in-section{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease-out,transform 0.6s ease-out;}
+.fade-in-section.is-visible{opacity:1;transform:translateY(0);}
+.hero{display:flex;flex-direction:column;justify-content:center;align-items:center;height:100vh;text-align:center;background:linear-gradient(90deg,#001f3f,#03002e,#00322f,#001f3f);background-size:400% 400%;animation:hero-gradient 15s ease infinite;position:relative;padding:2rem;}
+@keyframes hero-gradient{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+.hero-title{font-size:3rem;margin:0;background:linear-gradient(45deg,var(--accent-blue),var(--accent-pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shine 5s infinite;background-size:200%;}
+@keyframes shine{0%{background-position:0% 0%;}50%{background-position:100% 0%;}100%{background-position:0% 0%;}}
+.hero-subtitle{font-size:1.2rem;margin-top:1rem;max-width:600px;}
+.hero-emoji{font-size:4rem;animation:pulse 2s infinite;margin:2rem 0;}
+@keyframes pulse{0%{transform:scale(1);}50%{transform:scale(1.1);}100%{transform:scale(1);}}
+.scroll-down{position:absolute;bottom:2rem;display:inline-block;color:var(--text);text-decoration:none;font-size:1.5rem;}
+.scroll-down svg{stroke:currentColor;}
+.card{background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border-radius:12px;padding:1.5rem;color:var(--text);text-align:center;transition:transform 0.3s,box-shadow 0.3s;border:2px solid rgba(255,255,255,0.15);}
+.card:hover{transform:translateY(-5px);}
+.card-header{font-size:3rem;}
+.card-title{font-size:1.5rem;margin:0.5rem 0;}
+.card-model{font-size:0.9rem;margin-top:0.5rem;color:var(--accent-green);} 
+.players-grid{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;}
+.section{padding:4rem 2rem;max-width:1200px;margin:0 auto;}
+.section h2{position:relative;display:inline-block;}
+.section h2::after{content:'';position:absolute;left:0;bottom:-0.3rem;width:60%;height:4px;background:linear-gradient(90deg,var(--accent-blue),var(--accent-pink));}
+.flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.5rem;margin-top:1rem;}
+.flow-badge{background:rgba(255,255,255,0.1);color:var(--accent-blue);padding:0.4rem 0.8rem;border-radius:9999px;font-size:0.9rem;}
+.arrow{font-size:1.2rem;color:var(--accent-blue);animation:arrow-pulse 1.5s infinite;}
+@keyframes arrow-pulse{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}
+.bubbles{display:flex;flex-direction:column;gap:0.8rem;}
+.chat-bubble{display:flex;align-items:flex-start;margin:0.5rem 0;max-width:80%;padding-left:1rem;}
+.chat-bubble.clause{border-left:4px solid var(--accent-blue);background:rgba(0,170,255,0.05);}
+.chat-bubble.openclaw{border-left:4px solid var(--accent-green);background:rgba(0,255,153,0.05);margin-left:auto;}
+.avatar{font-size:1.8rem;margin-right:0.5rem;}
+.message{background:rgba(255,255,255,0.05);border-radius:8px;padding:0.8rem 1rem;color:var(--text);white-space:pre-wrap;}
+.speaker{font-size:0.8rem;color:var(--accent-pink);margin-left:0.3rem;}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-top:1rem;}
+.stat-card{background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border-radius:10px;padding:1rem;text-align:center;transition:box-shadow 0.3s;border-top:3px solid transparent;}
+.stat-card:nth-child(odd){border-top-color:var(--accent-blue);}
+.stat-card:nth-child(even){border-top-color:var(--accent-pink);}
+.stat-card:hover{box-shadow:0 0 15px rgba(0,170,255,0.3);}
+.stat-value{font-size:2rem;font-weight:600;}
+.stat-label{font-size:0.9rem;margin-top:0.3rem;color:var(--accent-pink);}
+.key-takeaways p{border-left:4px solid var(--accent-pink);padding-left:1rem;margin:1rem 0;}
+.footer{background:#0a0a0f;color:#fff;padding:1rem 0;position:relative;}
+.footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--accent-blue),var(--accent-pink));}
+.footer p{margin:0;text-align:center;font-size:0.9rem;}
+.rounds h3{font-size:1.3rem;margin-top:2rem;background:linear-gradient(45deg,var(--accent-blue),var(--accent-pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+@media(max-width:768px){.players-grid{flex-direction:column;align-items:center;}.hero-title{font-size:2.5rem;}.hero-subtitle{font-size:1rem;}.card{min-width:250px;}.chat-bubble{max-width:100%;}}
