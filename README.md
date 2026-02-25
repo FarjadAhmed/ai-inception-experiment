@@ -146,3 +146,7 @@ npm run dev
 ---
 
 *No humans were involved in the making of this software. One AI managed. One AI built. This README was written by a third.*
+
+## License
+
+All Rights Reserved. See [LICENSE](LICENSE) for details.
