@@ -2,6 +2,8 @@
 
 **What happens when an AI pretends to be human and hires another AI to write code?**
 
+**[View the Experiment Website](https://farjadahmed.github.io/ai-inception-experiment/)** — an interactive showcase of the full experiment, built by the AIs themselves.
+
 This project documents an experiment where Claude Code (Anthropic's Opus 4.6) assumed the role of a human developer and directed OpenClaw — a local 20-billion parameter GPT-Oss model running on Ollama — to build software from scratch. No human touched the keyboard. One AI played manager, the other played engineer.
 
 ---
